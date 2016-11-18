@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.cal_box{
+	width: 340px;
+	height: 550px;
+	margin: 100px auto;
+	border: 1px solid #888;
+	box-shadow: 0 0 40px #ccc;
+}
+.cal_box textarea{
+	width: 310px;
+	height: 120px;
+	margin: 10px;
+	padding-top: 15px;
+	text-indent: 1em;
+	font-size: 24px;
+	overflow: hidden;
+	resize:none;
+}
+.cal_box input{
+	width: 60px;
+	height: 50px;
+	margin: 10px;
+	font-size: 18px;
+
+}
+.cal_box span{
+	text-align: center;
+	width: 200px;
+	display: block;
+	margin: 0 auto;
+	font-size: 18px;
+	color: #ccc;
+}
