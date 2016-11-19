@@ -1,6 +1,6 @@
 var cal_box=document.getElementById('cal_box'),
 	display=document.getElementById('display'),
-	
+	displayResult=document.getElementById('displayResult'),
 	cal_result="",//存放运算结果
 	list1="",	//存放输入的第一个值
 	list2="",	//存放第二个值
@@ -48,7 +48,7 @@ document.addEventListener('click',function(e){
 			case '-': cal_result=parseFloat(num1-num2);break;
 			case '+': cal_result=parseFloat(num1+num2);break;
 		}
-		display.innerHTML=num1+sym+num2+'\n\n\t'+eql+cal_result;//显示输出结果
+		displayResult.innerHTML=cal_result;//显示输出结果
 		list1="";//每次运算完，再次输入时自动清屏，
 		list2="";//这两个一定要清空，否则需要按清空键才能再次输入
 	};
@@ -58,6 +58,7 @@ document.addEventListener('click',function(e){
 		flag=false;		
 		list1="";	//输入按键但没有进行运算，按清屏键后不保留之前输入的值
 		list2="";
+		displayResult.innerHTML="";//清除上次运算的结果
 		
 		
 	};
