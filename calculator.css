@@ -6,25 +6,41 @@
 	width: 340px;
 	height: 550px;
 	margin: 100px auto;
-	border: 1px solid #888;
+	border: 2px solid #888;
+	border-radius: 8px;
 	box-shadow: 0 0 40px #ccc;
 }
-.cal_box textarea{
+
+.display{
+	border: 1px solid #998001;
 	width: 310px;
-	height: 120px;
 	margin: 10px;
-	padding-top: 15px;
-	text-indent: 1em;
+	border-radius: 4px;
+	
+}
+.cal_box textarea,#displayResult{
+	width: 310px;
 	font-size: 24px;
-	overflow: hidden;
+	border: none;	
+}
+.cal_box textarea{
+	height: 70px;
+	text-indent: 5px;
+	padding-top: 8px;
 	resize:none;
+}
+#displayResult{
+	height: 50px;
+	text-align: right;
+	line-height: 50px;
+	overflow: hidden;
+	background: #EBEBE4;
 }
 .cal_box input{
 	width: 60px;
 	height: 50px;
 	margin: 10px;
 	font-size: 18px;
-
 }
 .cal_box span{
 	text-align: center;
