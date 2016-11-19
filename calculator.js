@@ -24,6 +24,7 @@ document.addEventListener('click',function(e){
 	if(target.className=='sym') {
 		flag=true;
 		sym=target.value;
+		list2="";//当改选运算符号时，清除原先输入的数，重新输入
 		display.innerHTML=num1+sym;						
 	};
 
@@ -41,16 +42,22 @@ document.addEventListener('click',function(e){
 	//进行计算并输出结果
 	if (target.className=='eql') {	//判断是否是按了等于键
 		eql=target.value;
-		flag=false;
-		switch(sym){
-			case '/': cal_result=parseFloat(num1/num2);break;
-			case '*': cal_result=parseFloat(num1*num2);break;
-			case '-': cal_result=parseFloat(num1-num2);break;
-			case '+': cal_result=parseFloat(num1+num2);break;
+		if (flag) {
+			switch(sym){
+				case '/': cal_result=parseFloat(num1/num2);break;
+				case '*': cal_result=parseFloat(num1*num2);break;
+				case '-': cal_result=parseFloat(num1-num2);break;
+				case '+': cal_result=parseFloat(num1+num2);break;
+			}
+			displayResult.innerHTML=cal_result;//显示输出结果
+			
+		}else{
+			displayResult.innerHTML=num1;//没有运算时，直接输出第一个数
 		}
-		displayResult.innerHTML=cal_result;//显示输出结果
-		list1="";//每次运算完，再次输入时自动清屏，
+		flag=false;
+		list1="";//每次在显示完，再次输入时自动清屏，
 		list2="";//这两个一定要清空，否则需要按清空键才能再次输入
+		sym="";
 	};
 	//清屏
 	if (target.className=='cl') {
