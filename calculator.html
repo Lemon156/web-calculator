@@ -2,14 +2,18 @@
 <head>
 	<meta charset="utf-8">
 	<title>计算器</title>
-	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<link rel="stylesheet" type="text/css" href="css/calculator.css">
 </head>
 <body>
 	<div class="cal_box">
 		<table id="cal_box" >
 			<tr>
-				<td colspan="4">			
-					<textarea id="display"disabled="disabled" placeholder="calculator by lemon156"></textarea></td>
+				<td colspan="4"><!--显示屏-->
+					<div class="display">
+						<textarea id="display"disabled="disabled" placeholder="calculator by lemon156"></textarea>
+						<p id="displayResult"></p>
+					</div>			
+				</td>
 			</tr>
 
 			<tr>
@@ -46,7 +50,7 @@
 		</table>
 		<span>----lemon156----</span>
 	</div>
-<script type="text/javascript" src="calculator.js">
+<script type="text/javascript" src="js/calculator.js">
 
 </script>
 </body>
